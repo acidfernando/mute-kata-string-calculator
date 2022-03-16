@@ -5,7 +5,7 @@
   "main": "build/main.js",
   "engineStrict": true,
   "engines": {
-    "node": ">= 12.13.0"
+    "node": ">= 16.14.0"
   },
   "contributors": [
     "Daniel Ramos <danielramosacosta@hotmail.com>",
