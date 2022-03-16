@@ -1,3 +1,3 @@
-export function MyFunction() {
-  return 
+export function MyFunction(numbers: string): number {
+  return 1
 }

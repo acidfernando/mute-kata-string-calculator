@@ -14,8 +14,7 @@
   "license": "ISC",
   "scripts": {
     "clean": "rimraf coverage build tmp",
-    "build": "babel src -x .ts -d build",
-    "build:watch": "babel src -x .ts -d build --watch",
+    "build": "swc src --extensions .ts -d build",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --ext .ts --fix ./src",
     "test": "jest",
@@ -23,15 +22,12 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-proposal-class-properties": "7.13.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
-    "@babel/preset-typescript": "7.13.0",
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.156",
+    "@swc/jest": "^0.2.20",
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
-    "babel-jest": "^27.0.2",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -58,7 +54,7 @@
       "jsx"
     ],
     "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+      "^.+\\.(js|jsx|ts|tsx)$": "@swc/jest"
     }
   }
 }
