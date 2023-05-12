@@ -17,4 +17,8 @@ describe("Default test", () => {
   it("should work with new lines characters", () => {
     expect(add("1\n2,3")).toEqual(6)
   })
+
+  it("should allow custom delimiters", () => {
+    expect(add("//;\n1;2")).toEqual(3)
+  })
 })
