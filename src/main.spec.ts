@@ -13,4 +13,8 @@ describe("Default test", () => {
   it("should add two numbers", () => {
     expect(add("2,3")).toEqual(5)
   })
+
+  it("should work with new lines characters", () => {
+    expect(add("1\n2,3")).toEqual(6)
+  })
 })
