@@ -9,4 +9,8 @@ describe("Default test", () => {
   it("should work in case you have only one number", () => {
     expect(add("4")).toEqual(4)
   })
+
+  it("should add two numbers", () => {
+    expect(add("2,3")).toEqual(5)
+  })
 })
