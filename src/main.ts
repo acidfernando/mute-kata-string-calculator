@@ -4,7 +4,7 @@ export function add(numbers: string) {
   let delimiter = ","
   let finalNumbers = numbers
 
-  if (numbers.slice(0, 2) === "//") {
+  if (numbers.startsWith("//")) {
     delimiter = numbers[2]
     finalNumbers = numbers.slice(4)
   }
