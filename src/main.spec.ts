@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest"
-import { myFunction } from "./main.js"
+import { add } from "./main.js"
 
 describe("Default test", () => {
-  it("should work", () => {
-    expect(myFunction()).toEqual(undefined)
+  it("shouldn't do anything if numbers not passed", () => {
+    expect(add("")).toEqual(undefined)
   })
 })
